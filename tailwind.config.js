@@ -12,7 +12,14 @@ export default {
          very_dark_violet: 'hsl(278, 68%, 11%)',
       },
 
-      extend: {},
+      extend: {
+         backgroundImage: {
+            'bg-card-back': 'url(./public/images/bg-card-back.png)',
+            'bg-card-front': 'url(./public/images/bg-card-front.png)',
+            'bg-main-desktop': 'url(./public/images/bg-main-desktop.png)',
+            'bg-main-mobile': 'url(./public/images/bg-main-mobile.png)',
+         },
+      },
 
       fontFamily: {
          space_grotesk: ['Space Grotesk', 'sans-serif'],
