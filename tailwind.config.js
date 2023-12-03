@@ -14,10 +14,10 @@ export default {
 
       extend: {
          backgroundImage: {
-            'bg-card-back': 'url(./public/images/bg-card-back.png)',
-            'bg-card-front': 'url(./public/images/bg-card-front.png)',
-            'bg-main-desktop': 'url(./public/images/bg-main-desktop.png)',
-            'bg-main-mobile': 'url(./public/images/bg-main-mobile.png)',
+            'card-back': 'url(./public/images/bg-card-back.png)',
+            'card-front': 'url(./public/images/bg-card-front.png)',
+            'main-desktop': 'url(./public/images/bg-main-desktop.png)',
+            'main-mobile': 'url(./public/images/bg-main-mobile.png)',
          },
       },
 
