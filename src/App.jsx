@@ -1,8 +1,8 @@
 function App() {
    return (
-      <main className="bg-main-desktop h-full">
-         <p className="text-input_error">oi</p>
-      </main>
+      <>
+         <p className="text-5xl text-orange-600">hello world</p>
+      </>
    );
 }
 
