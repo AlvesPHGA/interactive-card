@@ -17,7 +17,15 @@ export default {
       fontFamily: {
          spaceGrotesk: ['Space Grotesk', 'sans-serif'],
       },
-      extend: {},
+      extend: {
+         backgroundImage: {
+            cardBack: 'url(./public/bg-card-back.png)',
+            cardFront: 'url(./public/bg-card-front.png)',
+
+            mainDesktop: 'url(./public/bg-main-desktop.png)',
+            mainMobile: 'url(./public/bg-main-mobile.png)',
+         },
+      },
    },
    plugins: [],
 };
