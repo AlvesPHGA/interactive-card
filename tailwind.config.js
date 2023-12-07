@@ -13,6 +13,10 @@ export default {
          darkGrayshViolet: 'hsl(279, 6%, 55%)',
          veryDarkViolet: 'hsl(278, 68%, 11%)',
       },
+
+      fontFamily: {
+         spaceGrotesk: ['Space Grotesk', 'sans-serif'],
+      },
       extend: {},
    },
    plugins: [],
