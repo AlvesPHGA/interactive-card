@@ -19,11 +19,16 @@ export default {
       },
       extend: {
          backgroundImage: {
-            cardBack: 'url(./public/bg-card-back.png)',
-            cardFront: 'url(./public/bg-card-front.png)',
+            cardBack: 'url(./public/images/bg-card-back.png)',
+            cardFront: 'url(./public/images/bg-card-front.png)',
 
-            mainDesktop: 'url(./public/bg-main-desktop.png)',
-            mainMobile: 'url(./public/bg-main-mobile.png)',
+            mainDesktop: 'url(./public/images/bg-main-desktop.png)',
+            mainMobile: 'url(./public/images/bg-main-mobile.png)',
+         },
+
+         backgroundSize: {
+            thousand: '100% 100%',
+            custom: '38% 100%',
          },
       },
    },
