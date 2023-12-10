@@ -7,6 +7,8 @@ const inputDefaultCSS = {
 };
 
 function App() {
+   const [form, setForm] = React.useState([]);
+
    return (
       <main className="font-spaceGrotesk text-lg border h-screen bg-mainDesktop bg-custom bg-no-repeat">
          <section className="flex mx-auto translate-y-2/4 justify-center gap-40 items-center w-[1200px]">
@@ -17,6 +19,8 @@ function App() {
                      className={`${inputDefaultCSS.def01} w-full p-2 flex flex-col`}
                      label="CARDHOLDER NAME"
                      id="name"
+                     value={form}
+                     setValue={setForm}
                      placeholder="e.g. Jane Appleseed"
                   />
                </div>
