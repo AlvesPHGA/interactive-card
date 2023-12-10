@@ -10,8 +10,8 @@ function App() {
    const [form, setForm] = React.useState([]);
 
    return (
-      <main className="font-spaceGrotesk text-lg border h-screen bg-mainDesktop bg-custom bg-no-repeat">
-         <section className="flex mx-auto translate-y-2/4 justify-center gap-40 items-center w-[1200px]">
+      <main className="font-spaceGrotesk relative text-lg border h-screen bg-mainDesktop bg-custom bg-no-repeat">
+         <section className="absolute transform -translate-x-1/2 left-2/4 -translate-y-1/2 top-2/4  flex mx-auto justify-center gap-40 items-center w-[1200px]">
             <Cards />
             <form className="w-fit">
                <div>
