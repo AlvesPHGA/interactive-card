@@ -13,8 +13,10 @@ const inputDefaultCSS = {
 function App() {
   const [name, setName] = React.useState("");
   const [numberCard, setNumberCard] = React.useState("");
-  const [month, setMonth] = React.useState("");
-  const [year, setYear] = React.useState("");
+  const [date, setDate] = React.useState({
+    month: "",
+    year: "",
+  });
   const [cvc, setCVC] = React.useState("");
 
   return (
@@ -23,13 +25,13 @@ function App() {
         <Cards />
 
         <form className="w-fit">
-          <NameField />
+          <NameField value={name} setValue={setName} />
 
-          <NumberCardField />
+          <NumberCardField value={numberCard} setValue={setNumberCard} />
 
           <div className="flex  gap-x-5">
-            <ValidCardField />
-            <CvcField />
+            <ValidCardField value={date} setValue={setDate} />
+            <CvcField value={cvc} setValue={setCVC} />
           </div>
 
           <Button />
