@@ -22,7 +22,7 @@ const Cards = () => {
           </h1>
           <div className="flex justify-between uppercase text-base items-center">
             <span id="nameCard">Person name</span>
-            <span>00/00</span>
+            <span id="month">00</span>/<span id="year">00</span>
           </div>
         </div>
       </div>
