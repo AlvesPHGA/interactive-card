@@ -2,10 +2,11 @@ import React from 'react';
 import Cards from './Components/Cards';
 import NameField from './Components/NameField';
 import NumberCardField from './Components/NumberCardField';
-import ValidCardField from './Components/ValidCardField';
 import CvcField from './Components/CvcField';
 import Button from './Components/Button';
 import useForm from './Hooks/useForm';
+import Month from './Components/Month';
+import Year from './Components/Year';
 
 const inputDefaultCSS = {
    def01: 'border border-lightGrayshViolet rounded',
@@ -14,14 +15,9 @@ const inputDefaultCSS = {
 function App() {
    const name = useForm('');
    const number = useForm('');
-   const date = useForm('');
+   const month = useForm('');
+   const year = useForm('');
    const cvc = useForm('');
-
-   // const [date, setDate] = React.useState({
-   //    month: '',
-   //    year: '',
-   // });
-   // const [cvc, setCVC] = React.useState('');
 
    return (
       <main className="font-spaceGrotesk relative text-lg border h-screen bg-mainDesktop bg-custom bg-no-repeat">
@@ -33,7 +29,15 @@ function App() {
                <NumberCardField {...number} />
 
                <div className="flex  gap-x-5">
-                  <ValidCardField {...date} />
+                  <div>
+                     <label className="text-base text-veryDarkViolet">
+                        EXP. DATE (MM/YY)
+                     </label>
+                     <div className="flex gap-x-2.5">
+                        <Month {...month} />
+                        <Year {...year} />
+                     </div>
+                  </div>
                   <CvcField {...cvc} />
                </div>
 
