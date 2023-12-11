@@ -8,10 +8,6 @@ import Month from './Components/Month';
 import Year from './Components/Year';
 import useForm from './Hooks/useForm';
 
-const inputDefaultCSS = {
-   def01: 'border border-lightGrayshViolet rounded',
-};
-
 function App() {
    const name = useForm('');
    const number = useForm('');

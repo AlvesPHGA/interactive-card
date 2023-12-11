@@ -21,6 +21,7 @@ const CvcField = ({ value, error, onChange, onBlur }) => {
             onChange={onChange}
             onBlur={onBlur}
          />
+         {error && <p className="text-xs text-errorInput">{error}</p>}
       </div>
    );
 };

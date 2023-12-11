@@ -3,12 +3,11 @@ import React from 'react';
 const useForm = (type) => {
    const [value, setValue] = React.useState('');
    const [error, setError] = React.useState(null);
-   const [inputError, setInputError] = React.useState();
 
    function validate(value) {
       if (type === false) return true;
       if (value.length === 0) {
-         setError('Preencha o campo corretamente.');
+         setError('Não deixar em branco!');
          return false;
       } else {
          setError(null);
