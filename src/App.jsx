@@ -24,7 +24,7 @@ function App() {
       <section className="absolute transform -translate-x-1/2 left-2/4 -translate-y-1/2 top-2/4  flex mx-auto justify-center gap-40 items-center w-[1200px]">
         <Cards />
 
-        <form className="w-fit">
+        <form onSubmit={(e) => e.preventDefault()} className="w-fit">
           <NameField value={name} setValue={setName} />
 
           <NumberCardField value={numberCard} setValue={setNumberCard} />
