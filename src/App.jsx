@@ -1,46 +1,46 @@
-import React from "react";
-import Cards from "./Components/Cards";
-import NameField from "./Components/NameField";
-import NumberCardField from "./Components/NumberCardField";
-import ValidCardField from "./Components/ValidCardField";
-import CvcField from "./Components/CvcField";
-import Button from "./Components/Button";
-import useForm from "./Hooks/useForm";
+import React from 'react';
+import Cards from './Components/Cards';
+import NameField from './Components/NameField';
+import NumberCardField from './Components/NumberCardField';
+import ValidCardField from './Components/ValidCardField';
+import CvcField from './Components/CvcField';
+import Button from './Components/Button';
+import useForm from './Hooks/useForm';
 
 const inputDefaultCSS = {
-  def01: "border border-lightGrayshViolet rounded",
+   def01: 'border border-lightGrayshViolet rounded',
 };
 
 function App() {
-  const name = useForm("");
-  //const [name, setName] = React.useState("");
-  const [numberCard, setNumberCard] = React.useState("");
-  const [date, setDate] = React.useState({
-    month: "",
-    year: "",
-  });
-  const [cvc, setCVC] = React.useState("");
+   const name = useForm('');
+   const number = useForm('');
 
-  return (
-    <main className="font-spaceGrotesk relative text-lg border h-screen bg-mainDesktop bg-custom bg-no-repeat">
-      <section className="absolute transform -translate-x-1/2 left-2/4 -translate-y-1/2 top-2/4  flex mx-auto justify-center gap-40 items-center w-[1200px]">
-        <Cards />
+   const [date, setDate] = React.useState({
+      month: '',
+      year: '',
+   });
+   const [cvc, setCVC] = React.useState('');
 
-        <form onSubmit={(e) => e.preventDefault()} className="w-fit">
-          <NameField {...name} />
+   return (
+      <main className="font-spaceGrotesk relative text-lg border h-screen bg-mainDesktop bg-custom bg-no-repeat">
+         <section className="absolute transform -translate-x-1/2 left-2/4 -translate-y-1/2 top-2/4  flex mx-auto justify-center gap-40 items-center w-[1200px]">
+            <Cards />
 
-          <NumberCardField value={numberCard} setValue={setNumberCard} />
+            <form onSubmit={(e) => e.preventDefault()} className="w-fit">
+               <NameField {...name} />
 
-          <div className="flex  gap-x-5">
-            <ValidCardField value={date} setValue={setDate} />
-            <CvcField value={cvc} setValue={setCVC} />
-          </div>
+               <NumberCardField {...number} />
 
-          <Button />
-        </form>
-      </section>
-    </main>
-  );
+               <div className="flex  gap-x-5">
+                  <ValidCardField value={date} setValue={setDate} />
+                  <CvcField value={cvc} setValue={setCVC} />
+               </div>
+
+               <Button />
+            </form>
+         </section>
+      </main>
+   );
 }
 
 export default App;
