@@ -17,7 +17,9 @@ const Cards = () => {
         />
 
         <div className="text-white">
-          <h1 className="mb-3 text-2xl tracking-widest">0000 0000 0000 0000</h1>
+          <h1 id="numberField" className="mb-3 text-2xl tracking-widest">
+            0000 0000 0000 0000
+          </h1>
           <div className="flex justify-between uppercase text-base items-center">
             <span id="nameCard">Person name</span>
             <span>00/00</span>
