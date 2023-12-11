@@ -1,6 +1,12 @@
 import React from "react";
 
-const NameField = () => {
+const NameField = ({ value, setValue }) => {
+  function handleChange({ target }) {
+    let name = document.querySelector("#nameCard");
+    setValue(target.value);
+    name.innerText = target.value;
+  }
+
   return (
     <div>
       <label className="text-base text-veryDarkViolet" htmlFor="name">
@@ -12,6 +18,7 @@ const NameField = () => {
         name="name"
         id="name"
         placeholder="e.g. Jane Appleseed"
+        onChange={handleChange}
       />
     </div>
   );
