@@ -5,13 +5,15 @@ import NumberCardField from "./Components/NumberCardField";
 import ValidCardField from "./Components/ValidCardField";
 import CvcField from "./Components/CvcField";
 import Button from "./Components/Button";
+import useForm from "./Hooks/useForm";
 
 const inputDefaultCSS = {
   def01: "border border-lightGrayshViolet rounded",
 };
 
 function App() {
-  const [name, setName] = React.useState("");
+  const name = useForm("");
+  //const [name, setName] = React.useState("");
   const [numberCard, setNumberCard] = React.useState("");
   const [date, setDate] = React.useState({
     month: "",
@@ -25,7 +27,7 @@ function App() {
         <Cards />
 
         <form onSubmit={(e) => e.preventDefault()} className="w-fit">
-          <NameField value={name} setValue={setName} />
+          <NameField {...name} />
 
           <NumberCardField value={numberCard} setValue={setNumberCard} />
 

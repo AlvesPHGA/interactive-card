@@ -1,12 +1,6 @@
 import React from "react";
 
-const NameField = ({ value, setValue }) => {
-  function handleChange({ target }) {
-    let name = document.querySelector("#nameCard");
-    setValue(target.value);
-    name.innerText = target.value;
-  }
-
+const NameField = ({ value, error, onChange, onBlur }) => {
   return (
     <div>
       <label className="text-base text-veryDarkViolet" htmlFor="name">
@@ -18,8 +12,11 @@ const NameField = ({ value, setValue }) => {
         name="name"
         id="name"
         placeholder="e.g. Jane Appleseed"
-        onChange={handleChange}
+        value={value}
+        onChange={onChange}
+        onBlur={onBlur}
       />
+      {error && <p className="text-xs text-errorInput">{error}</p>}
     </div>
   );
 };
