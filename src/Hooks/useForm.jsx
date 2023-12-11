@@ -19,11 +19,20 @@ const useForm = (type) => {
    function changeField(target) {
       const nameCard = document.querySelector('#nameCard');
       const numberField = document.querySelector('#numberField');
+      const monthCard = document.querySelector('#monthCard');
+      const yearCard = document.querySelector('#yearCard');
+      const cvcCard = document.querySelector('#cvcCard');
 
       if (target.id === 'name') {
          nameCard.innerText = target.value;
       } else if (target.id === 'number') {
          numberField.innerText = target.value;
+      } else if (target.id === 'month') {
+         monthCard.innerText = target.value;
+      } else if (target.id === 'year') {
+         yearCard.innerText = target.value;
+      } else if (target.id === 'cvc') {
+         cvcCard.innerText = target.value;
       }
    }
 
