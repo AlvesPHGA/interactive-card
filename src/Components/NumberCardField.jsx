@@ -7,7 +7,9 @@ const NumberCardField = ({ value, error, onChange, onBlur }) => {
             CARD NUMBER
          </label>
          <input
-            className="border border-lightGrayshViolet rounded w-full p-2 flex flex-col"
+            className={`border border-lightGrayshViolet rounded w-full p-2 flex flex-col ${
+               error && 'border-errorInput'
+            }`}
             type="text"
             name="number"
             id="number"
@@ -16,7 +18,6 @@ const NumberCardField = ({ value, error, onChange, onBlur }) => {
             onChange={onChange}
             onBlur={onBlur}
          />
-         {error && <p className="text-xs text-errorInput">{error}</p>}
       </div>
    );
 };

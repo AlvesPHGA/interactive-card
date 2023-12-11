@@ -3,6 +3,7 @@ import React from 'react';
 const useForm = (type) => {
    const [value, setValue] = React.useState('');
    const [error, setError] = React.useState(null);
+   const [inputError, setInputError] = React.useState();
 
    function validate(value) {
       if (type === false) return true;
@@ -27,7 +28,6 @@ const useForm = (type) => {
    }
 
    function onChange({ target }) {
-      const tgt = target;
       if (error) validate(target.value);
       setValue(target.value);
       changeField(target);

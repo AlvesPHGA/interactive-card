@@ -14,12 +14,14 @@ const inputDefaultCSS = {
 function App() {
    const name = useForm('');
    const number = useForm('');
+   const date = useForm('');
+   const cvc = useForm('');
 
-   const [date, setDate] = React.useState({
-      month: '',
-      year: '',
-   });
-   const [cvc, setCVC] = React.useState('');
+   // const [date, setDate] = React.useState({
+   //    month: '',
+   //    year: '',
+   // });
+   // const [cvc, setCVC] = React.useState('');
 
    return (
       <main className="font-spaceGrotesk relative text-lg border h-screen bg-mainDesktop bg-custom bg-no-repeat">
@@ -28,12 +30,11 @@ function App() {
 
             <form onSubmit={(e) => e.preventDefault()} className="w-fit">
                <NameField {...name} />
-
                <NumberCardField {...number} />
 
                <div className="flex  gap-x-5">
-                  <ValidCardField value={date} setValue={setDate} />
-                  <CvcField value={cvc} setValue={setCVC} />
+                  <ValidCardField {...date} />
+                  <CvcField {...cvc} />
                </div>
 
                <Button />
