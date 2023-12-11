@@ -27,7 +27,10 @@ const Cards = () => {
         </div>
       </div>
       <div className={`bg-cardBack ml-16 relative ${imgCard.back}`}>
-        <span className="absolute top-[5.75rem] left-[19.5rem] text-white text-sm">
+        <span
+          id="cvc"
+          className="absolute top-[5.75rem] left-[19.5rem] text-white text-sm"
+        >
           000
         </span>
       </div>
