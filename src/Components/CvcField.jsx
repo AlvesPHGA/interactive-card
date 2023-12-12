@@ -13,6 +13,7 @@ const CvcField = ({ value, error, onChange, onBlur }) => {
             className={`border border-lightGrayshViolet rounded w-36 p-1 flex flex-col ${
                error && 'border-[#FF5252]'
             }`}
+            maxLength="3"
             type="text"
             name="cvc"
             id="cvc"

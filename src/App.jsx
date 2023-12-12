@@ -11,17 +11,33 @@ import useForm from './Hooks/useForm';
 
 function App() {
    const name = useForm('');
-   const number = useForm('');
+   const number = useForm('number');
    const month = useForm('');
    const year = useForm('');
    const cvc = useForm('');
+
+   function handleSubmit(ev) {
+      ev.preventDefault();
+
+      if (
+         name.validate() &&
+         number.validate() &&
+         month.validate() &&
+         year.validate() &&
+         cvc.validate()
+      ) {
+         alert('Informações enviadas com sucesso');
+      } else {
+         alert('Por favor, tente mais tarde.');
+      }
+   }
 
    return (
       <main className="font-spaceGrotesk relative text-lg border h-screen bg-mainDesktop bg-custom bg-no-repeat">
          <section className="absolute transform -translate-x-1/2 left-2/4 -translate-y-1/2 top-2/4  flex mx-auto justify-center gap-40 items-center w-[1200px]">
             <Cards />
 
-            <form onSubmit={(e) => e.preventDefault()} className="w-fit">
+            <form onSubmit={handleSubmit} className="w-fit">
                <NameField {...name} />
                <NumberCardField {...number} />
 

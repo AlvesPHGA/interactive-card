@@ -1,5 +1,12 @@
 import React from 'react';
 
+const types = {
+   number: {
+      regex: /^\d{4}\s\d{4}\s\d{4}\s\d{4}$/,
+      message: 'Formato errado',
+   },
+};
+
 const useForm = (type) => {
    const [value, setValue] = React.useState('');
    const [error, setError] = React.useState(null);
@@ -8,11 +15,12 @@ const useForm = (type) => {
       if (type === false) return true;
       if (value.length === 0) {
          setError('Não deixar em branco!');
-
+         return false;
+      } else if (types[type] && !types[type].regex.test(value)) {
+         setError(types[type].message);
          return false;
       } else {
          setError(null);
-
          return true;
       }
    }

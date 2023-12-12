@@ -7,6 +7,7 @@ const Month = ({ value, error, onChange, onBlur }) => {
             className={`border border-lightGrayshViolet rounded p-1 w-20 ${
                error && 'border-[#FF5252]'
             }`}
+            maxLength="2"
             type="text"
             name="month"
             id="month"
