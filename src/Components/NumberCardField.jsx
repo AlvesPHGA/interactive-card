@@ -1,6 +1,6 @@
 import React from 'react';
 
-const NumberCardField = ({ value, error, onChange, onBlur }) => {
+const NumberCardField = ({ value, textError, onChange, onBlur }) => {
    return (
       <div className="my-4">
          <label className="text-base text-veryDarkViolet" htmlFor="number">
@@ -8,7 +8,7 @@ const NumberCardField = ({ value, error, onChange, onBlur }) => {
          </label>
          <input
             className={`border border-lightGrayshViolet rounded w-full p-2 flex flex-col ${
-               error && 'border-errorInput'
+               textError ? 'border-errorInput' : 'border-lightGrayshViolet'
             }`}
             type="text"
             name="number"
@@ -18,7 +18,7 @@ const NumberCardField = ({ value, error, onChange, onBlur }) => {
             onChange={onChange}
             onBlur={onBlur}
          />
-         {error && <p className="text-xs text-errorInput">{error}</p>}
+         {textError && <p className="text-xs text-errorInput">{textError}</p>}
       </div>
    );
 };

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CvcField = ({ value, error, onChange, onBlur }) => {
+const CvcField = ({ value, textError, onChange, onBlur }) => {
    //  function handleChange({ target }) {
    //     const cvc = document.querySelector('#cvc');
    //     setValue(target.value);
@@ -11,7 +11,7 @@ const CvcField = ({ value, error, onChange, onBlur }) => {
          <label htmlFor="cvc">CVC</label>
          <input
             className={`border border-lightGrayshViolet rounded w-36 p-1 flex flex-col ${
-               error && 'border-errorInput'
+               textError && 'border-errorInput'
             }`}
             type="text"
             name="cvc"
@@ -21,7 +21,7 @@ const CvcField = ({ value, error, onChange, onBlur }) => {
             onChange={onChange}
             onBlur={onBlur}
          />
-         {error && <p className="text-xs text-errorInput">{error}</p>}
+         {textError && <p className="text-xs text-errorInput">{textError}</p>}
       </div>
    );
 };

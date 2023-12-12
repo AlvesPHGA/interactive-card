@@ -1,24 +1,7 @@
-import React from "react";
+import React from 'react';
 
-const useMask = (type) => {
-  const [data, setData] = React.useState();
-
-  function mask(element) {
-    element.addEventListener("keyup", (ev) => {
-      console.log(ev);
-    });
-  }
-
-  function onChange({ target }) {
-    mask(target);
-  }
-
-  return {
-    data,
-    setData,
-
-    onChange,
-  };
+const numberCardMask = (value) => {
+   return value.replace(/\D/, '');
 };
 
-export default useMask;
+export default numberCardMask;

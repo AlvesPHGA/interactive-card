@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ValidCardField = ({ value, error, onChange, onBlur }) => {
+const ValidCardField = ({ value, textError, onChange, onBlur }) => {
    // function handleChange({ target }) {
    //   setValue({ ...value, [target.id]: target.value });
    //   const month = document.querySelector("#month");
@@ -40,7 +40,7 @@ const ValidCardField = ({ value, error, onChange, onBlur }) => {
                onBlur={onBlur}
             />
          </div>
-         {error && <p className="text-xs text-errorInput">{error}</p>}
+         {textError && <p className="text-xs text-errorInput">{textError}</p>}
       </div>
    );
 };

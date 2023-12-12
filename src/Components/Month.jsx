@@ -1,11 +1,9 @@
 import React from 'react';
 
-const Month = ({ value, error, onChange, onBlur }) => {
+const Month = ({ value, textError, onChange, onBlur }) => {
    return (
       <input
-         className={`border border-lightGrayshViolet rounded p-1 w-20 ${
-            error && 'border-errorInput'
-         }`}
+         className={`border border-lightGrayshViolet rounded p-1 w-20`}
          type="text"
          name="month"
          id="month"
