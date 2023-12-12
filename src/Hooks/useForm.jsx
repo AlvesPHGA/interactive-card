@@ -2,15 +2,17 @@ import React from 'react';
 
 const useForm = (type) => {
    const [value, setValue] = React.useState('');
-   const [textError, setTextError] = React.useState(null);
+   const [error, setError] = React.useState(null);
 
    function validate(value) {
       if (type === false) return true;
       if (value.length === 0) {
-         setTextError('Não deixar em branco!');
+         setError('Não deixar em branco!');
+
          return false;
       } else {
-         setTextError(null);
+         setError(null);
+
          return true;
       }
    }
@@ -36,7 +38,7 @@ const useForm = (type) => {
    }
 
    function onChange({ target }) {
-      if (textError) validate(target.value);
+      if (error) validate(target.value);
       setValue(target.value);
       changeField(target);
    }
@@ -44,7 +46,7 @@ const useForm = (type) => {
    return {
       value,
       setValue,
-      textError,
+      error,
 
       onChange,
       onBlur: () => validate(value),

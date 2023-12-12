@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Year = ({ value, textError, onChange, onBlur }) => {
+const Year = ({ value, error, onChange, onBlur }) => {
    return (
       <input
          className={`border border-lightGrayshViolet rounded p-1 w-20 ${
-            textError && 'border-errorInput'
+            error && 'border-[#FF5252]'
          }`}
          type="text"
          name="year"
