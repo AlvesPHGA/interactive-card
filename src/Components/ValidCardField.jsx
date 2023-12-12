@@ -1,17 +1,6 @@
 import React from 'react';
 
 const ValidCardField = ({ value, textError, onChange, onBlur }) => {
-   // function handleChange({ target }) {
-   //   setValue({ ...value, [target.id]: target.value });
-   //   const month = document.querySelector("#month");
-   //   const year = document.querySelector("#year");
-
-   //   if (target.id === "month") {
-   //     month.innerText = target.value;
-   //   } else {
-   //     year.innerText = target.value;
-   //   }
-   // }
    return (
       <div>
          <label className="text-base text-veryDarkViolet">
