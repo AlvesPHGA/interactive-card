@@ -42,13 +42,25 @@ function App() {
                <NumberCardField {...number} />
 
                <div className="flex  gap-x-5">
-                  <div>
+                  <div className="relative">
                      <label className="text-base text-veryDarkViolet">
                         EXP. DATE (MM/YY)
                      </label>
-                     <div className="flex gap-x-2.5">
-                        <Month {...month} />
-                        <Year {...year} />
+                     <div className="relative h-10">
+                        <div className="flex gap-x-2.5">
+                           <Month {...month} />
+                           <Year {...year} />
+                        </div>
+                        {month.error && (
+                           <p className="absolute top-full text-xs text-errorInput">
+                              {month.error}
+                           </p>
+                        )}
+                        {year.error && (
+                           <p className="absolute top-full text-xs text-errorInput">
+                              {year.error}
+                           </p>
+                        )}
                      </div>
                   </div>
                   <CvcField {...cvc} />
