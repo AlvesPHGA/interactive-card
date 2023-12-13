@@ -17,6 +17,7 @@ export default {
       fontFamily: {
          spaceGrotesk: ['Space Grotesk', 'sans-serif'],
       },
+
       extend: {
          backgroundImage: {
             cardBack: 'url(./public/images/bg-card-back.png)',
@@ -30,6 +31,14 @@ export default {
             thousand: '100% 100%',
             custom: '38% 100%',
          },
+      },
+
+      screens: {
+         ss: { max: '320px' },
+         sm: { min: '321px', max: '375px' },
+         sl: { min: '376px', max: '425px' },
+         st: { min: '426px', max: '768px' },
+         sLap: { min: '769px', max: '1024px' },
       },
    },
    plugins: [],
