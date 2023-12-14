@@ -18,6 +18,5 @@ Here apply some concept of React ,as useState, web components and was created a 
 ## Todo
 
 -  Mobile layout
-   -  Medium device
    -  Larger device
 -  Navigate
