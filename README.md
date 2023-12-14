@@ -8,14 +8,16 @@ Here apply some concept of React ,as useState, web components and was created a 
 
 ## Technology
 
-- ReactJS
+-  ReactJS
 
-  - useState
-  - web components
+   -  useState
+   -  web components
 
-- Tailwind
+-  Tailwind
 
 ## Todo
 
-- Mobile layout
-- Navigate
+-  Mobile layout
+   -  Medium device
+   -  Larger device
+-  Navigate
