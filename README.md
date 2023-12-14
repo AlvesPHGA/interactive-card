@@ -14,3 +14,8 @@ Here apply some concept of React ,as useState, web components and was created a 
   - web components
 
 - Tailwind
+
+## Todo
+
+- Mobile layout
+- Navigate
