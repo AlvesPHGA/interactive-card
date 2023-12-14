@@ -11,7 +11,7 @@ const Cards = () => {
             className={`bg-cardFront px-7 py-5 flex flex-col justify-end relative ${imgCard.back} ss:absolute ss:w-[280px] ss:top-[127px] ss:h-40 ss:z-10 ss:py-4 ss:px-6`}
          >
             <img
-               className="absolute left-7 top-5"
+               className="absolute left-7 top-5 ss:h-10 ss:top-4 ss:left-[1.40rem]"
                src="../public/svg/card-logo.svg"
                alt=""
             />
