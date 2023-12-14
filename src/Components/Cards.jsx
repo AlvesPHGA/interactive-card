@@ -23,7 +23,7 @@ const Cards = () => {
                >
                   0000 0000 0000 0000
                </h1>
-               <div className="flex justify-between uppercase text-base items-center ss:text-sm">
+               <div className="flex justify-between uppercase text-base items-center ss:text-xs">
                   <span id="nameCard">Person name</span>
                   <div>
                      <span id="monthCard">00</span>/
