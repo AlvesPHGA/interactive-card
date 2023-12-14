@@ -1,8 +1,16 @@
-# React + Vite
+# Interactive Card
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## About
 
-Currently, two official plugins are available:
+This is a small project consist a challenge of site frontend mentor.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Here apply some concept of React ,as useState, web components and was created a hook to form validate with name useForm.
+
+## Technology
+
+- ReactJS
+
+  - useState
+  - web components
+
+- Tailwind
