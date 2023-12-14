@@ -2,8 +2,11 @@ import React from 'react';
 
 const NameField = ({ value, error, onChange, onBlur }) => {
    return (
-      <div>
-         <label className="text-base text-veryDarkViolet" htmlFor="name">
+      <div className="ss:text-sm">
+         <label
+            className="text-base text-veryDarkViolet ss:text-sm"
+            htmlFor="name"
+         >
             CARDHOLDER NAME
          </label>
          <input

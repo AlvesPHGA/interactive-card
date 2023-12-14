@@ -7,8 +7,10 @@ const CvcField = ({ value, error, onChange, onBlur }) => {
    //     cvc.innerText = target.value;
    //  }
    return (
-      <div className="h-10">
-         <label htmlFor="cvc">CVC</label>
+      <div className="h-10 ss:text-sm ss:h-[70px] ss:pt-2">
+         <label className="ss:text-sm" htmlFor="cvc">
+            CVC
+         </label>
          <input
             className={`border border-lightGrayshViolet rounded w-36 p-1 flex flex-col ${
                error && 'border-[#FF5252]'

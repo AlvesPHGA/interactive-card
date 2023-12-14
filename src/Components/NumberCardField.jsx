@@ -2,8 +2,11 @@ import React from 'react';
 
 const NumberCardField = ({ value, error, onChange, onBlur }) => {
    return (
-      <div className="my-4">
-         <label className="text-base text-veryDarkViolet" htmlFor="number">
+      <div className="my-4 ss:text-sm">
+         <label
+            className="text-base text-veryDarkViolet ss:text-sm"
+            htmlFor="number"
+         >
             CARD NUMBER
          </label>
          <input

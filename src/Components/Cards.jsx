@@ -6,9 +6,9 @@ const imgCard = {
 
 const Cards = () => {
    return (
-      <section className="flex flex-col gap-8 ss:gap-0 ss:w-screen ss:p-5">
+      <section className="flex flex-col gap-8 ss:gap-0 ss:h-72 ss:w-screen ss:p-5 ss:static">
          <div
-            className={`bg-cardFront px-7 py-5 flex flex-col justify-end relative ${imgCard.back} ss:absolute ss:w-[280px] ss:top-[120px] ss:h-40 ss:z-10 ss:py-4 ss:px-6`}
+            className={`bg-cardFront px-7 py-5 flex flex-col justify-end relative ${imgCard.back} ss:absolute ss:w-[280px] ss:top-[127px] ss:h-40 ss:z-10 ss:py-4 ss:px-6`}
          >
             <img
                className="absolute left-7 top-5"

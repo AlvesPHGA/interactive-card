@@ -4,7 +4,7 @@ const Month = ({ value, error, onChange, onBlur }) => {
    return (
       <>
          <input
-            className={`border border-lightGrayshViolet rounded p-1 w-20 ${
+            className={`border border-lightGrayshViolet rounded p-1 w-20 ss:text-sm ${
                error && 'border-[#FF5252]'
             }`}
             maxLength="2"
